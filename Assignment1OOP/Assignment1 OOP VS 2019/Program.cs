@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// ^^
+
 namespace Assignment1_OOP_VS_2019
 {
     class Program
@@ -20,6 +22,7 @@ namespace Assignment1_OOP_VS_2019
 
             Report Output_user = new Report();
             
+            //Maybe create a more meaningful variable name here instead of input like decision
             Input input1 = new Input();
             string inputChoice = input1.ChoiceOfMethod();
             string text = "";
