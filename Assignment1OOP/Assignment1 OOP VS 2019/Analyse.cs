@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Using ... can be removed before submission as they're not needed. You can remove now and editor would add back whatever is needed as you continue.
+// Not a big deal if you leave them however I would advise removing.
+
 namespace Assignment1_OOP_VS_2019
 {
     public class Analyse
@@ -20,6 +23,10 @@ namespace Assignment1_OOP_VS_2019
         char[] Upper_Not_Vowel = { 'B', 'C', 'D', 'f', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'Y', 'V', 'X', 'Z', 'W' };
         char[] Sentence_Ends = { '.', '!', '?' };
         char[] Space_Between_Words = { ' ' };
+        
+        //Variables need to start with lowercase eg: not_VowerLower
+        //Maybe ask the user to end each sentence with an asterisk so the sentence ends don't matter what punctuation they choose one less array
+        
         public List<int> analyseText(string input)
         {
             //List of integers to hold the first five measurements:
@@ -41,7 +48,8 @@ namespace Assignment1_OOP_VS_2019
             List<int> values = new List<int>();
             //Initialise all the values in the list to '0'
 
-
+            // for this you can directly convert it into upper and lower maybe try do that saves some arrays and reduces code as it's only 1 line to convert.
+            // eg: if lowerVowel = vowels[i].ToLower() - something along those lines
             foreach (char ch in input)
             {
                 if (Upper_Not_Vowel.Contains(ch))
@@ -61,7 +69,7 @@ namespace Assignment1_OOP_VS_2019
                     exist = true; 
                 }
             }
-
+            //You've put these exist = true? I don't think they're needed are they doing anything? If not I woild remove them
             foreach (char ch in input)
             {
                 if (Is_VowelLower.Contains(ch))
@@ -72,7 +80,7 @@ namespace Assignment1_OOP_VS_2019
                 }
             }
             
-
+            // Can implament the same thing as vowels. 
             foreach (char ch in input)
             {
                 if(Not_VowelLower.Contains(ch))
@@ -83,7 +91,8 @@ namespace Assignment1_OOP_VS_2019
                 }
             }
            
-
+            // If you implement the asterisk method just say if "ch == * " then increment the value by 1.
+            // Good Variable names so far :)
             foreach (char ch in input)
             {
                 if(Sentence_Ends.Contains(ch))
@@ -93,6 +102,7 @@ namespace Assignment1_OOP_VS_2019
                 }
             }
             
+            //Nice touch
             foreach (char ch in input)
             {
                 if(Space_Between_Words.Contains(ch))
@@ -102,7 +112,8 @@ namespace Assignment1_OOP_VS_2019
                 }
 
             }
-
+            // if you use the converstion you can create less variables and depending if it's upper or lower do: 
+            // uppercase++, vowels++ or lowercase++, vowels++ instead of needing to do this calc
             Total_Letters = Lower_count + Upper_Count;
 
 
