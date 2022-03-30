@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\skyec\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\skyec\\.nuget\\packages"
-    ]
-  }
-}
